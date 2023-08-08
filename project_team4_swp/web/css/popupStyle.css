@@ -1,0 +1,314 @@
+/*========== Pop-up =========*/
+
+.box_container
+{
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-content: center;
+    /*background-color: red;*/
+    /*overflow: scroll;*/
+}
+
+.box_container2
+{
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 99999;
+    display: none;
+    justify-content: center;
+    align-content: center;
+    /*background-color: red;*/
+    /*overflow: scroll;*/
+}
+
+.box_container .box_wraper_content
+{
+    width: 800px;
+    max-height: 600px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 #000;
+    margin: 50px;
+    position: relative;
+    z-index: 999;
+    /*display: flex;*/
+    /*    justify-content: center;
+        align-items: center;
+        flex-direction: column;*/
+    overflow-y: scroll;
+
+}
+
+ .box_wraper_content2{
+    width: 600px;
+    height: auto;
+    margin: 100px;
+    position: relative;
+    z-index: 99999;
+    /*overflow-y: scroll;*/
+    display: inline-block;
+}
+.box_container2 .w_content_2
+{
+    width: 800px;
+}
+
+/*============ Close button ==========*/
+.box_wraper_content .close-btn,.box_wraper_content2 .close-btn2
+{
+    text-align: center;
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    font-weight: 400;
+    box-shadow: 0 0 1px black;
+    border-radius: 3px;
+}
+
+/*=============Css Content==========*/
+.box_wraper_content .box_content
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.box_wraper_content2 .box_content2{
+    width: 100%;
+    /*height: 100%;*/
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 #000;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.box_content h4,.box_content2 h4
+{
+    font-size: 24px;
+    margin: 5px 0;
+}
+.box_wraper_content .box_content h3,.box_wraper_content2 .box_content2 h3
+{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.box_wraper_content .box_content .items, .box_wraper_content2 .box_content2 .items
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    margin-bottom: 10px;
+}
+.box_wraper_content .box_content .items.choseFile
+{
+        box-shadow:  none;
+}
+.box_wraper_content .box_content .items.position_top
+{
+    align-items: start;
+}
+.box_content .items label,.box_content2 .items label
+{
+    width: 15rem;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.box_content .items input,.box_content .items p,.box_content .items .group_chose
+,.box_content .items textarea
+{
+    width: 36rem;
+    margin: 0 45px;
+    padding: 3px 15px;
+    font-size: 20px;
+    border: none;
+
+    box-shadow: 0 0 5px #8ad539;
+}
+.box_content .items textarea
+{
+    overflow: auto;
+    resize: vertical;
+    padding: 8px;
+}
+.box_content .items .select_items
+{
+    width: 24rem;
+    /*margin: 0 45px;*/
+    padding: 3px 15px;
+    font-size: 20px;
+    border: none;
+    border: 1px solid black;
+}
+.box_content2 .items input,.box_content2 .items p
+{
+    width: 36rem;
+    margin: 0 45px;
+    padding: 3px 15px;
+    font-size: 20px;
+    border: none;
+
+    box-shadow: 0 0 5px #8ad539;
+}
+
+.box_content .items .group_chose{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    box-shadow: none;
+    padding: 5px 0;
+}
+.items .group_chose input{
+    max-width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+}
+.items .group_chose label
+{
+    width: 8rem;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+.box_content .items .input_button
+{
+    width: 36rem;
+    margin: 0 45px;
+    /*padding: 3px 15px;*/
+    font-size: 20px;
+    border: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.items .input_button .input_button_content
+{
+    width: 20rem;
+    margin: 0 15px 0 0;
+}
+.items .input_button button
+{
+    width: 12rem;
+    height: 3.2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.items .input_button button:hover{
+    box-shadow: 0 0 5px gold;
+    cursor: pointer;
+    opacity: .8;
+}
+.box_content .items input.readOnly,.box_content2 .items input.readOnly
+{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px #007bff;
+    cursor: pointer;
+}
+
+.box_content .ok_btn,.box_content2 .ok_btn
+{
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 5px;
+    color: white;
+}
+.box_content .ok_btn:hover{
+    box-shadow: 0 0 10px #17a2b8;
+    opacity: .8;
+    cursor: pointer;
+
+}
+.box_content2 .ok_btn:hover{
+    box-shadow: 0 0 10px #17a2b8;
+    opacity: .8;
+    cursor: pointer;
+
+}
+.btn_1{
+    background-color: #e36403;
+}
+.btn_2{
+    background-color: #007bff;
+}
+
+
+.box_container .group_button,.box_container2 .group_button
+{
+    width: 40rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 0;
+}
+.box_container2 .group_button{
+    margin: 30px 0 20px 0;
+}
+.box_container .blur,.box_container2 .blur
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000;
+    opacity: .5;
+    z-index: 998;
+}
+
+
+/*============= Css them ==================*/
+.box_wraper_content .box_content .items.previewImage
+{
+    /*display: none;*/
+}
+.items #preview
+{
+    width: 36rem;
+    height: 30rem;
+    object-fit: contain;
+}
+.box_content .items .items_categoty_select
+{
+    width: 36rem;
+    margin: 5px 45px;
+    font-size: 20px;
+    border: none;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.box_content .items .category_select{
+    width: 24rem;
+    padding: 3px 15px;
+    font-size: 20px;
+}
+
+.items .error
+{
+    color: red;
+    position: absolute;
+    right: 0;
+}

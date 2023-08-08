@@ -1,0 +1,555 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 21, 2023, 9:23:21 PM
+    Author     : phamtung
+*/
+
+html{
+    font-size: 62.5%;
+    /*font-family: none;*/
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --width-menu : 32rem;
+
+}
+
+body::-webkit-scrollbar {
+    width: 12px; /* Độ rộng của thanh cuộn */
+
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Màu nền của thanh cuộn */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #888; /* Màu của thanh cuộn */
+    border-radius: 6px; /* Độ cong viền của thanh cuộn */
+}
+
+.container
+{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #eff1f3;
+    position: relative;
+}
+
+
+/*========== Header ========*/
+.container .header
+{
+    position: fixed;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 8rem;
+    background: rgb(0 76 61);
+    box-shadow:0 0 10px 0 #000;
+    z-index: 99;
+}
+.header .header-left
+{
+    width: 17%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    /*background-color: green;*/
+}
+.header .header-left .btn-menu
+{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 10rem;
+    font-size: 4rem;
+    margin:0 2rem 0 1rem;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.header-left .btn-menu:hover:before
+{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6.3rem;
+    height: 6.3rem;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    opacity: .2;
+}
+
+.header .header-left .btn-menu:active
+{
+    opacity: .8;
+}
+.header .header-left .logo
+{
+    /*width: 8rem;*/
+    height: 6.3rem;
+    object-fit: contain;
+    user-select:none;
+    flex: 1;
+    cursor: pointer;
+}
+
+.header .header-right
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    user-select: none;
+}
+.header-right .balance
+{
+    font-size: 2.7rem;
+    opacity: .8;
+    color: transparent;
+
+    background: linear-gradient(to bottom, whitesmoke, yellow, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-right: 2.7rem;
+}
+
+
+.header-right .balance span
+{
+    color: white;
+    font-size: 3rem;
+    min-width: 150px;
+    font-weight: 600;
+    opacity: .8;
+    display: inline-block;
+}
+.balance:hover span
+{
+    opacity: 1;
+}
+.header .header-right .profile
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+}
+.header-right .profile img
+{
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-right .profile .profile_icon
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 6.3rem;
+    color: white;
+    cursor: pointer;
+}
+
+.header-right .profile:hover img
+{
+    box-shadow: 0 0 15px 0 whitesmoke;
+
+}
+
+
+
+/* ========== Menu Profile ========== */
+
+.header .menu_right
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: var(--width-menu);
+    height: 100vh;
+    background: #ffffff;
+    transform: translateX( var(--width-menu));
+    transition: all .5s ease-in;
+}
+.menu_right .top_menu
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem 1rem;
+    border-bottom: 2px solid #000;
+}
+
+.menu_right .top_menu .icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.3rem;
+    height: 6.3rem;
+    font-size: 4.5rem;
+    border-radius: 50%;
+    color: green;
+    background: #dbe3e2;
+    border: 2px solid greenyellow;
+    margin: 0 8px;
+}
+.menu_right .top_menu .fullName
+{
+    width: 10rem;
+
+    flex-grow: 1;
+
+}
+
+.top_menu .fullName h2
+{
+    /*color: red;*/
+    overflow: hidden;
+    font-size: 2.8rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    text-align: justify;
+}
+
+
+.menu_right ul li
+{
+    list-style: none;
+    font-size: 3.3rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    margin-top: 3rem;
+    margin-left: 12px;
+}
+.menu_right ul li:hover
+{
+    text-decoration: underline;
+}
+.header .menu_right.active
+{
+    transform: translateX(0);
+}
+.header .menu_right.active .menu_blur
+{
+
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: calc(-1*calc(100vw));
+    background-color: #000;
+    opacity: .5;
+    z-index: 99;
+
+    color: red;
+    font-size: 4rem;
+    text-align: center;
+
+}
+
+/*=======  End right menu ======*/
+
+
+/*============= Start Left menu ===========*/
+
+.header .menu_left
+{
+    position: absolute;
+    width: 320px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -320px;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px gray;
+    transition: all .5s ease-in;
+}
+
+.menu_left .top_menu
+{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.menu_left .top_menu img
+{
+    width: 240px;
+    height: 8.1rem;
+    object-fit: contain;
+}
+
+.menu_left ul li
+{
+    list-style: none;
+    font-size: 3.3rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    margin-top: 3rem;
+    margin-left: 12px;
+}
+.menu_left ul li:hover
+{
+    text-decoration: underline;
+}
+.menu_left.active .menu_blur{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: calc(-1*calc(100vw));
+    background-color: #000;
+    opacity: .5;
+    z-index: 99;
+    color: red;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.header .menu_left.active{
+    left: 0;
+}
+
+/*========= End Left Menu =======*/
+
+
+.wrapItem
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.job-content
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.job-content h5
+{
+    display: inline-block;
+    width: 18rem;
+    text-align: justify;
+    font-size: 16px;
+}
+
+
+/*========= Mua san pham =========*/
+
+
+
+
+.container .buyProduct_wrapper
+{
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /*background-color: red;*/
+    /*overflow: scroll;*/
+    display: none;
+}
+
+.buyProduct_wrapper .productView
+{
+    width: 90rem;
+    height: 36rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 #000;
+    margin: 50px;
+    position: relative;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    /*overflow: scroll;*/
+    background-color: white;
+    /*animation: fadeDown 1s ease;*/
+}
+
+/*@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}*/
+
+.productView h3
+{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.contentProduct
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+
+.contentProduct .item
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: 80%;
+}
+
+.contentProduct .item label
+{
+    width: 10rem;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+}
+.contentProduct .item input
+{
+    /*flex: 1;*/
+    width: 36rem;
+    margin: 0 45px;
+    padding: 3px 15px;
+    font-size: 20px;
+}
+.contentProduct .item .readOnly
+{
+    cursor: grab;
+    border: none;
+    outline: none;
+    background-color: #dbe3e2;
+    box-shadow: 0 0 5px green;
+
+}
+
+.productView .groupButton .btn
+{
+    width: 12.5rem;
+    height: 3.6rem;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px green;
+    margin: 1rem 1rem;
+    font-weight: 600;
+    color: white;
+}
+.productView .groupButton .btn:active{
+    opacity: .8;
+}
+.productView .groupButton .buy-btn
+{
+    background-color: #8ad539;
+}
+.productView .groupButton .close-btn
+{
+    background-color: #ffa834;
+}
+
+.buyProduct_wrapper .productView_blur
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000;
+    margin-left: -15px;
+    opacity: .5;
+    z-index: 9998;
+}
+
+
+/*Refresh Homepage*/
+#refreshHome
+{
+    display: none;
+}
+
+
+/*======Footter=======*/
+/* Định dạng footer */
+footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Định dạng phần container trong footer */
+
+.footter_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Định dạng văn bản trong footer */
+.footter_container p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footter_container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footter_container ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footter_container li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.footter_container li a:hover {
+    color: #007bff;
+}
+
+

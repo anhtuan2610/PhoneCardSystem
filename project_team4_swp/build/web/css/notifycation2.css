@@ -1,0 +1,290 @@
+
+
+.container .notification
+{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    /*background-color: #002752;*/
+    z-index: 9999999;
+    margin-left: -15px;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+.container .notification .notify_blur
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: .6;
+
+}
+.container .notification .notificationBox
+{
+    width: 380px;
+    height: 300px;
+    background-color: #fff;
+    position: absolute;
+
+    top: 50px;
+    margin: 0 auto;
+    transition: 1.2s all ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 5px;
+
+    border-radius: 20px;
+    box-shadow: 0 0 15px #fff;
+    /*animation: fadeDown 1s ease;*/
+}
+
+/*@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}*/
+
+.notification .notificationBox .icon,
+.notification .notificationBox .icon_wrong,
+.notification .notificationBox .icon_warning
+{
+    width: 96%;
+    text-align: center;
+    font-size: 54px;
+    color: green;
+    margin-top: -5px;
+    border-bottom: 2px solid black;
+}
+.notification .notificationBox .icon_wrong
+{
+
+    color: red;
+
+}
+.notification .notificationBox .icon_warning
+{
+
+    color: yellow;
+
+}
+.notification .notificationBox h3
+{
+    font-size: 28px;
+    text-align: center;
+}
+
+.notification .notificationBox .buttons
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.notification .notificationBox .btn
+{
+    width: 110px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+
+    position: relative;
+    cursor: pointer;
+    border-radius: 30px;
+
+    background-color: #00a501;
+    margin-bottom: 12px;
+}
+.notification .notificationBox .btn_close
+{
+    background-color: #fed655;
+
+}
+.notificationBox .btn:hover
+{
+    box-shadow: 0 0 10px green;
+
+}
+
+
+/* Animation */
+.fade_Down
+{
+    animation: fadeDown .8s ease forwards;
+}
+
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+.fade-Up
+{
+    animation: fadeUp .8s ease forwards;
+    /*background-color: red;*/
+}
+
+@keyframes fadeUp
+{
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+
+}
+/*====== Thông báo Add storage ======*/
+
+.container .notifyAddStorageContainer
+{
+    position: fixed;
+    z-index: 999999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*background-color: black;*/
+
+}
+.container .notifyAddStorageContainer .notifyStorage_blur
+{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.container .notifyAddStorageContainer .content_wraper
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    width: 800px;
+    min-height: 300px;
+    max-height:600px;
+    background-color: #fff;
+    box-shadow: 0 0 5px greenyellow;
+    overflow-y: scroll;
+}
+
+
+.container .notifyAddStorageContainer h3
+{
+    font-size: 36px;
+    margin: 20px 0;
+}
+.content_wraper table
+{
+    width: 60%;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.notifyAddStorageContainer .content_wraper .close_btn
+{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 50px;
+    height: 30px;
+    font-size: 24px;
+}
+.notifyAddStorageContainer .content_wraper .close_btn_OK
+{
+    min-width: 120px;
+    min-height: 45px;
+    box-shadow: 0 0 10px greenyellow;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+/*====== Thông báo fade left ======*/
+
+.notification2 {
+    width: 39rem;
+    height: 10rem;
+    background-color: #694e9f;
+    position: fixed;
+    z-index: 999999;
+    top: 1rem;
+    right: 2.2px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+.notification2 h3
+{
+    font-size: 2rem;
+    color: white;
+}
+.fade_left
+{
+    animation: fadeToLeft 1s ease, hiding 2s 3s ease forwards;
+
+}
+
+
+@keyframes fadeToLeft
+{
+    0% {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes hiding
+{
+    0% {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+
+}

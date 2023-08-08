@@ -1,0 +1,236 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 21, 2023, 9:23:21 PM
+    Author     : phamtung
+*/
+
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --width-menu : 32rem;
+
+}
+.container
+{
+    width: 100%;
+    height: 200vh;
+}
+
+/*========== Header ========*/
+.container .header
+{
+    position: fixed;
+    margin: 5px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10rem;
+    background: rgb(0 76 61);
+    box-shadow:0 0 10px 0 #000;
+    z-index: 99;
+}
+.header .header-left
+{
+    width: 17%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    /*background-color: green;*/
+}
+.header .header-left .btn-menu
+{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 10rem;
+    font-size: 4rem;
+    margin:0 2rem 0 1rem;
+    color: whitesmoke;
+}
+.header-left .btn-menu:hover:before
+{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6.3rem;
+    height: 6.3rem;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    opacity: .2;
+}
+.header .header-left .logo
+{
+    /*width: 8rem;*/
+    height: 6.3rem;
+    object-fit: contain;
+    user-select:none;
+    flex: 1;
+}
+
+.header .header-right
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    user-select: none;
+}
+.header-right .balance
+{
+    font-size: 2.7rem;
+    opacity: .8;
+    color: transparent;
+
+    background: linear-gradient(to bottom, whitesmoke, yellow, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    margin-right: 2.7rem;
+}
+
+
+.header-right .balance span
+{
+    color: white;
+    font-size: 3rem;
+
+    font-weight: 600;
+    opacity: .8;
+
+}
+.balance:hover span
+{
+    opacity: 1;
+}
+.header .header-right .profile
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+}
+.header-right .profile img
+{
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-right .profile .profile_icon
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 6.3rem;
+    color: white;
+}
+
+.header-right .profile:hover img
+{
+    box-shadow: 0 0 15px 0 whitesmoke;
+
+}
+
+
+
+/* ========== Menu Profile ========== */
+
+.header .menu_right
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: var(--width-menu);
+    height: 100vh;
+    background: #ffffff;
+    transform: translateX(var(--width-menu));
+    transition: all .5s ease-in;
+}
+.menu_right .top_menu
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem 1rem;
+    border-bottom: 2px solid #000;
+}
+
+.menu_right .top_menu .icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.3rem;
+    height: 6.3rem;
+    font-size: 4.5rem;
+    border-radius: 50%;
+    color: green;
+    background: #dbe3e2;
+    border: 2px solid greenyellow;
+    margin-right: 5px;
+}
+.menu_right .top_menu .fullName
+{
+    width: 10rem;
+    overflow: hidden;
+    flex-grow: 1;
+
+}
+.top_menu .fullName
+{
+    font-size: 2.4rem;
+}
+.menu_right ul li
+{
+    list-style: none;
+    font-size: 3.3rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+.menu_right ul li:hover
+{
+    text-decoration: underline;
+}
+.header .menu_right.active
+{
+    transform: translateX(0);
+}
+.header .menu_right.active .menu_blur
+{
+
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: calc(-1*calc(100vw));
+    background-color: #000;
+    opacity: .5;
+    z-index: 99;
+
+    color: red;
+    font-size: 4rem;
+    text-align: center;
+
+}

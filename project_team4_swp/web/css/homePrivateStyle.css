@@ -1,0 +1,164 @@
+
+
+/*body.popup-open {
+  overflow: hidden;
+}
+
+.container
+{
+    position: relative;
+}
+.Order
+{
+    position: absolute;
+    width: 60%;
+    height: 500px;
+    background-color: whitesmoke;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}*/
+/*.blur
+{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        z-index: 98;
+        background-color: #000;
+        opacity: .8;
+}*/
+
+
+
+.container .viewProductDetail_container
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.container .viewProductDetail_container .viewProduct_blur
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: .8;
+    z-index: 9998;
+    position: absolute;
+}
+.container .viewProductDetail{
+    width: 900px;
+    height: auto;
+    box-shadow: 0 0 10px 0 #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    /*overflow: scroll;*/
+    background-color: white;
+    padding: 10px 0;
+    /*animation: fadeDown 1s ease;*/
+    z-index: 9999;
+    
+    margin-top: -27px;
+}
+
+
+.viewProductDetail  h3{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.viewProductDetail .contentview
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.contentview .items img
+{
+   width: 200px;
+   height: 90px;
+   object-fit: cover;
+}
+.viewProductDetail .contentview .items
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: 80%;
+}
+
+.viewProductDetail .contentview .items label
+{
+    width: 10rem;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contentview .items input,.contentview .items p
+{
+    /*flex: 1;*/
+    width: 36rem;
+    margin: 0 45px;
+    padding: 3px 15px;
+    font-size: 20px;
+}
+.contentview .items p
+{
+    border: 1px solid #000;
+    box-shadow: 0 0 5px #8ad539;
+}
+.contentview .items .readOnly
+{
+    cursor: grab;
+    border: none;
+    outline: none;
+    background-color: #dbe3e2;
+    box-shadow: 0 0 5px green;
+
+}
+
+
+.viewProductDetail .groupButton .btn
+{
+    width: 12.5rem;
+    height: 3.6rem;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px green;
+    margin: 2rem 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.viewProductDetail .groupButton .btn:active{
+    opacity: .8;
+}
+.viewProductDetail .groupButton .buy_btn
+{
+    background-color: #8ad539;
+}
+.viewProductDetail .groupButton .close-btn
+{
+    background-color: #ffa834;
+}
+
+

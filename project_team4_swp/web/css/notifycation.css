@@ -1,0 +1,112 @@
+
+
+.container .notification
+{
+    display: none;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+.container .notification .blur
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: absolute;
+    opacity: .8;
+}
+.container .notification .notificationBox
+{
+    width: 360px;
+    height: 230px;
+    background-color: #fff;
+    position: absolute;
+
+    top: 50px;
+    margin: 0 auto;
+    transition: 1.2s all ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+
+    border-radius: 20px;
+    box-shadow: 0 0 15px #fff;
+    animation: fadeDown 1.2s ease;
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+.notification .notificationBox .icon
+{
+    width: 96%;
+    text-align: center;
+    font-size: 48px;
+    color: green;
+    margin-top: -5px;
+    border-bottom: 2px solid black;
+}
+.notification .notificationBox .icon_wrong
+{
+    width: 96%;
+    text-align: center;
+    font-size: 48px;
+    color: red;
+    margin-top: -5px;
+    border-bottom: 2px solid black;
+}
+.notification .notificationBox .icon_warning
+{
+    width: 96%;
+    text-align: center;
+    font-size: 48px;
+    color: yellow;
+    margin-top: -5px;
+    border-bottom: 2px solid black;
+}
+.notification .notificationBox h3
+{
+    font-size: 28px;
+    text-align: center;
+}
+
+.notification .notificationBox .btn_ok
+{
+    width: 110px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+
+    position: relative;
+    cursor: pointer;
+    border-radius: 30px;
+    
+}
+.notificationBox .btn_ok:hover
+{
+   box-shadow: 0 0 10px green;
+
+}
+
